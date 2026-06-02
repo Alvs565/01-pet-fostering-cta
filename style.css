@@ -1,0 +1,150 @@
+:root {
+  --deep-blue: #084c61;
+  --ocean-teal: #1a936f;
+  --soft-teal: #88bdbc;
+  --light-blue: #c7f9cc;
+  --text-color: #f4f4f4;
+  --button-color: #ffd166;
+  --button-hover: #ffca4a;
+}
+
+/* Base page styles for a clean, modern look */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #f3f9fb;
+  color: #102a43;
+}
+
+/* Simple header that sits above the CTA and uses the same palette */
+.site-header {
+  background: var(--deep-blue);
+  color: var(--light-blue);
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* Full-width CTA banner with tall spacing and a calm gradient + image overlay */
+.cta-banner {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  background:
+    linear-gradient(rgba(8, 76, 97, 0.65), rgba(26, 147, 111, 0.65)),
+    url("img/cta-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+}
+
+/* Center content and keep text readable on larger screens */
+.cta-content {
+  max-width: 760px;
+  text-align: center;
+}
+
+/* Fostering info section with two centered columns */
+.info-section {
+  padding: 3rem 1.5rem;
+  background: #ffffff;
+  color: #102a43;
+}
+
+.info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.info-image,
+.info-copy {
+  flex: 1 1 320px;
+  min-width: 280px;
+}
+
+.info-image img {
+  width: 500px;
+  display: block;
+  border-radius: 25%;
+  box-shadow: 0 12px 30px rgba(8, 76, 97, 0.12);
+  
+}
+
+.info-copy h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin-top: 0;
+}
+
+.info-copy p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+}
+
+.info-copy ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-copy li {
+  margin-bottom: 0.85rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.info-copy li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--button-color);
+  font-weight: 700;
+}
+
+/* Main heading to encourage action */
+.cta-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  margin: 0 0 1rem;
+  padding: 20px;
+}
+
+/* Short descriptive text to explain the importance of fostering */
+.cta-content p {
+  font-size: 1.15rem;
+  margin: 0 0 2rem;
+  color: #f4f4f4e6;
+}
+
+/* Eye-catching button style for the CTA link */
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--button-color);
+  color: #102a43;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 999px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover state for stronger emphasis */
+.cta-button:hover,
+.cta-button:focus-visible {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
